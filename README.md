@@ -7,10 +7,12 @@ Os dados do livro são encapsulados e informados por um construtor que valida
 os campos obrigatórios. A entidade oferece operações básicas para emprestar e
 devolver um exemplar.
 
-## Estrutura inicial
+## Estrutura atual
 
-- `src/main`: demonstração inicial do domínio.
-- `src/model`: entidades da biblioteca.
+- `src/main`: demonstração do empréstimo.
+- `src/model`: livro, leitor e empréstimo.
+
+`Emprestimo` associa um leitor a um livro e controla as datas e a devolução.
 
 ## Executar
 
