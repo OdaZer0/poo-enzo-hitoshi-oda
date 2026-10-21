@@ -10,9 +10,10 @@ devolver um exemplar.
 ## Estrutura atual
 
 - `src/main`: demonstração do empréstimo.
-- `src/model`: livro, leitor e empréstimo.
+- `src/model`: item de acervo, livro, revista, leitor e empréstimo.
 
-`Emprestimo` associa um leitor a um livro e controla as datas e a devolução.
+`Livro` e `Revista` herdam os dados e o controle de disponibilidade de
+`ItemAcervo`. `Emprestimo` associa um leitor a qualquer item do acervo.
 
 ## Executar
 

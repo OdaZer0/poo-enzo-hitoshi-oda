@@ -4,20 +4,20 @@ import java.time.LocalDate;
 
 public class Emprestimo {
     private final Leitor leitor;
-    private final Livro livro;
+    private final ItemAcervo item;
     private final LocalDate dataEmprestimo;
     private final LocalDate dataDevolucaoPrevista;
     private boolean ativo;
 
-    public Emprestimo(Leitor leitor, Livro livro) {
-        if (leitor == null || livro == null) {
-            throw new IllegalArgumentException("Leitor e livro são obrigatórios.");
+    public Emprestimo(Leitor leitor, ItemAcervo item) {
+        if (leitor == null || item == null) {
+            throw new IllegalArgumentException("Leitor e item são obrigatórios.");
         }
-        if (!livro.emprestar()) {
-            throw new IllegalStateException("O livro já está emprestado.");
+        if (!item.emprestar()) {
+            throw new IllegalStateException("O item já está emprestado.");
         }
         this.leitor = leitor;
-        this.livro = livro;
+        this.item = item;
         this.dataEmprestimo = LocalDate.now();
         this.dataDevolucaoPrevista = dataEmprestimo.plusDays(14);
         this.ativo = true;
@@ -27,8 +27,8 @@ public class Emprestimo {
         return leitor;
     }
 
-    public Livro getLivro() {
-        return livro;
+    public ItemAcervo getItem() {
+        return item;
     }
 
     public LocalDate getDataEmprestimo() {
@@ -47,7 +47,7 @@ public class Emprestimo {
         if (!ativo) {
             throw new IllegalStateException("O empréstimo já foi finalizado.");
         }
-        livro.devolver();
+        item.devolver();
         ativo = false;
     }
 }

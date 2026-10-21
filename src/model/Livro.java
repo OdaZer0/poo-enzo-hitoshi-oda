@@ -1,61 +1,32 @@
 package model;
 
-public class Livro {
-    private final String titulo;
+public class Livro extends ItemAcervo {
     private final String autor;
-    private final int anoPublicacao;
-    private boolean disponivel;
+    private final int quantidadePaginas;
 
-    public Livro(String titulo, String autor, int anoPublicacao) {
-        if (titulo == null || titulo.trim().isEmpty()) {
-            throw new IllegalArgumentException("O título é obrigatório.");
-        }
+    public Livro(String codigo, String titulo, int anoPublicacao,
+                 String autor, int quantidadePaginas) {
+        super(codigo, titulo, anoPublicacao);
         if (autor == null || autor.trim().isEmpty()) {
             throw new IllegalArgumentException("O autor é obrigatório.");
         }
-        if (anoPublicacao <= 0) {
-            throw new IllegalArgumentException("O ano de publicação deve ser positivo.");
+        if (quantidadePaginas <= 0) {
+            throw new IllegalArgumentException("A quantidade de páginas deve ser positiva.");
         }
-        this.titulo = titulo.trim();
         this.autor = autor.trim();
-        this.anoPublicacao = anoPublicacao;
-        this.disponivel = true;
-    }
-
-    public String getTitulo() {
-        return titulo;
+        this.quantidadePaginas = quantidadePaginas;
     }
 
     public String getAutor() {
         return autor;
     }
 
-    public int getAnoPublicacao() {
-        return anoPublicacao;
+    public int getQuantidadePaginas() {
+        return quantidadePaginas;
     }
 
-    public boolean isDisponivel() {
-        return disponivel;
-    }
-
-    public void exibirDetalhes() {
-        System.out.println(titulo + " - " + autor + " (" + anoPublicacao + ") | "
-                + (disponivel ? "disponível" : "emprestado"));
-    }
-
-    public boolean emprestar() {
-        if (!disponivel) {
-            return false;
-        }
-        disponivel = false;
-        return true;
-    }
-
-    public boolean devolver() {
-        if (disponivel) {
-            return false;
-        }
-        disponivel = true;
-        return true;
+    @Override
+    public String getTipo() {
+        return "Livro";
     }
 }
