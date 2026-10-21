@@ -4,10 +4,7 @@ import model.Livro;
 
 public class SistemaBiblioteca {
     public static void main(String[] args) {
-        Livro livro = new Livro();
-        livro.titulo = "Introdução à astronomia";
-        livro.autor = "Ana Martins";
-        livro.anoPublicacao = 2022;
+        Livro livro = new Livro("Introdução à astronomia", "Ana Martins", 2022);
 
         livro.exibirDetalhes();
         if (livro.emprestar()) {

@@ -3,8 +3,9 @@
 Projeto didático de Programação Orientada a Objetos em Java sobre o catálogo
 de uma biblioteca comunitária.
 
-O livro já oferece operações básicas para emprestar e devolver um exemplar,
-além de exibir sua disponibilidade.
+Os dados do livro são encapsulados e informados por um construtor que valida
+os campos obrigatórios. A entidade oferece operações básicas para emprestar e
+devolver um exemplar.
 
 ## Estrutura inicial
 
