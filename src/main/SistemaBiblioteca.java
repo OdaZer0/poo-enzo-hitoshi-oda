@@ -10,5 +10,12 @@ public class SistemaBiblioteca {
         livro.anoPublicacao = 2022;
 
         livro.exibirDetalhes();
+        if (livro.emprestar()) {
+            System.out.println("Livro emprestado.");
+        }
+        livro.exibirDetalhes();
+        if (livro.devolver()) {
+            System.out.println("Livro devolvido.");
+        }
     }
 }

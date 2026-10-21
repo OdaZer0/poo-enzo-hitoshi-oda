@@ -3,6 +3,9 @@
 Projeto didático de Programação Orientada a Objetos em Java sobre o catálogo
 de uma biblioteca comunitária.
 
+O livro já oferece operações básicas para emprestar e devolver um exemplar,
+além de exibir sua disponibilidade.
+
 ## Estrutura inicial
 
 - `src/main`: demonstração inicial do domínio.
