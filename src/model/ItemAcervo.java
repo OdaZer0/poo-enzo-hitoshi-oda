@@ -54,5 +54,7 @@ public abstract class ItemAcervo {
         return true;
     }
 
+    public abstract int getPrazoEmprestimoDias();
+
     public abstract String getTipo();
 }

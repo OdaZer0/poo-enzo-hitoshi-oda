@@ -26,6 +26,11 @@ public class Livro extends ItemAcervo {
     }
 
     @Override
+    public int getPrazoEmprestimoDias() {
+        return 14;
+    }
+
+    @Override
     public String getTipo() {
         return "Livro";
     }

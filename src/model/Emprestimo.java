@@ -19,7 +19,8 @@ public class Emprestimo {
         this.leitor = leitor;
         this.item = item;
         this.dataEmprestimo = LocalDate.now();
-        this.dataDevolucaoPrevista = dataEmprestimo.plusDays(14);
+        this.dataDevolucaoPrevista =
+                dataEmprestimo.plusDays(item.getPrazoEmprestimoDias());
         this.ativo = true;
     }
 

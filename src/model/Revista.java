@@ -16,6 +16,11 @@ public class Revista extends ItemAcervo {
     }
 
     @Override
+    public int getPrazoEmprestimoDias() {
+        return 7;
+    }
+
+    @Override
     public String getTipo() {
         return "Revista";
     }

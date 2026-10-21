@@ -14,6 +14,8 @@ devolver um exemplar.
 
 `Livro` e `Revista` herdam os dados e o controle de disponibilidade de
 `ItemAcervo`. `Emprestimo` associa um leitor a qualquer item do acervo.
+O prazo é polimórfico: livros podem ser emprestados por 14 dias e revistas
+por 7 dias, regra consultada pelo empréstimo por meio da classe abstrata.
 
 ## Executar
 

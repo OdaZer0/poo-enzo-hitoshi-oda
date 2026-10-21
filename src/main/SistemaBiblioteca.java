@@ -16,6 +16,11 @@ public class SistemaBiblioteca {
 
         System.out.println(livro.getTipo() + ": " + livro.getTitulo());
         System.out.println(revista.getTipo() + ": " + revista.getTitulo());
+        ItemAcervo[] itens = {livro, revista};
+        for (ItemAcervo item : itens) {
+            System.out.println(item.getTipo() + " pode ficar emprestado por "
+                    + item.getPrazoEmprestimoDias() + " dias.");
+        }
         Emprestimo emprestimo = new Emprestimo(leitor, livro);
         System.out.println("Empréstimo de " + emprestimo.getItem().getTitulo()
                 + " para " + emprestimo.getLeitor().getNome()
