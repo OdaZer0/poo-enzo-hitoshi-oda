@@ -1,6 +1,6 @@
 package model;
 
-public abstract class ItemAcervo {
+public abstract class ItemAcervo implements Emprestavel {
     private final String codigo;
     private final String titulo;
     private final int anoPublicacao;
@@ -34,10 +34,12 @@ public abstract class ItemAcervo {
         return anoPublicacao;
     }
 
+    @Override
     public boolean isDisponivel() {
         return disponivel;
     }
 
+    @Override
     public boolean emprestar() {
         if (!disponivel) {
             return false;
@@ -46,6 +48,7 @@ public abstract class ItemAcervo {
         return true;
     }
 
+    @Override
     public boolean devolver() {
         if (disponivel) {
             return false;
@@ -54,6 +57,7 @@ public abstract class ItemAcervo {
         return true;
     }
 
+    @Override
     public abstract int getPrazoEmprestimoDias();
 
     public abstract String getTipo();

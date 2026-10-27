@@ -5,7 +5,8 @@ import model.Emprestimo;
 import model.Livro;
 import model.Leitor;
 import model.Revista;
-import service.Biblioteca;
+import model.Biblioteca;
+import model.Emprestavel;
 
 public class TesteBiblioteca {
     public static void main(String[] args) {
@@ -15,6 +16,8 @@ public class TesteBiblioteca {
         Leitor leitor = new Leitor("M001", "Leitor de teste");
         biblioteca.cadastrarItem(livro);
         biblioteca.cadastrarItem(revista);
+        assert livro instanceof Emprestavel;
+        assert revista instanceof Emprestavel;
 
         Emprestimo emprestimoLivro = biblioteca.emprestar("L001", leitor);
         assert !livro.isDisponivel();

@@ -1,13 +1,10 @@
-package service;
+package model;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import model.Emprestimo;
-import model.ItemAcervo;
-import model.Leitor;
 
 public class Biblioteca {
     private final Map<String, ItemAcervo> catalogo;

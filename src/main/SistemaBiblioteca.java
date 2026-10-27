@@ -6,7 +6,7 @@ import model.ItemAcervo;
 import model.Leitor;
 import model.Livro;
 import model.Revista;
-import service.Biblioteca;
+import model.Biblioteca;
 
 public class SistemaBiblioteca {
     public static void main(String[] args) {
